@@ -1,0 +1,44 @@
+# ============================================
+# OSOrganicAI - Core Dependencies
+# ============================================
+
+# LangChain Core & Providers
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-anthropic>=0.1.0
+langchain-community>=0.0.20
+
+# Pydantic for Structured Outputs & Settings
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# API Framework (Serverless-optimized)
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# Database & External Services
+supabase>=2.3.0
+postgrest>=0.13.0
+pygithub>=2.1.1
+
+# HTTP & Async
+httpx>=0.25.0
+aiohttp>=3.9.0
+
+# Utilities
+python-dotenv>=1.0.0
+tenacity>=8.2.3
+pyyaml>=6.0.1
+
+# Logging & Monitoring
+structlog>=23.2.0
+python-json-logger>=2.0.7
+
+# Security & Authentication
+cryptography>=41.0.7
+pyjwt>=2.8.0
+
+# Date & Time
+python-dateutil>=2.8.2
+pytz>=2023.3

@@ -9,12 +9,17 @@
   ],
   "routes": [
     {
-      "src": "/api/webhooks",
+      "src": "/api/webhooks/github",
       "dest": "api/webhooks.py",
       "methods": ["POST"]
     },
     {
       "src": "/api/health",
+      "dest": "api/health.py",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/health/ping",
       "dest": "api/health.py",
       "methods": ["GET"]
     }
@@ -25,7 +30,7 @@
   "functions": {
     "api/**/*.py": {
       "memory": 1024,
-      "maxDuration": 30
+      "maxDuration": 60
     }
   },
   "regions": ["iad1"],
