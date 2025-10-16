@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "name": "CHILD_TEMPLATE",
+  "builds": [
+    {
+      "src": "api/**/*.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/webhooks/github",
+      "dest": "api/webhooks.py",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/health",
+      "dest": "api/health.py",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/health/ping",
+      "dest": "api/health.py",
+      "methods": ["GET"]
+    }
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.10"
+  },
+  "functions": {
+    "api/**/*.py": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "regions": ["iad1"],
+  "github": {
+    "silent": true
+  }
+}
