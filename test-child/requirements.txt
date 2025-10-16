@@ -1,0 +1,40 @@
+# Test-Child E-commerce Instance - Python Dependencies
+# This file includes all dependencies needed for Vercel deployment
+
+# ============================================
+# Core Dependencies (from mother repo)
+# ============================================
+
+# AI/LLM Framework
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-anthropic>=0.1.0
+langchain-community>=0.0.20
+
+# API Framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# Data Validation
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Database
+supabase>=2.3.0
+
+# GitHub Integration
+PyGithub>=2.1.1
+
+# Logging
+structlog>=23.2.0
+python-json-logger>=2.0.7
+
+# Environment
+python-dotenv>=1.0.0
+
+# HTTP
+httpx>=0.25.0
+requests>=2.31.0
+
+# Utilities
+python-dateutil>=2.8.2

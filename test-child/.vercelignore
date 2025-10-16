@@ -1,0 +1,37 @@
+# Vercel Ignore File for Test-Child
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Testing
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Documentation (don't deploy)
+README.md
+
+# Git
+.git/
+.gitignore

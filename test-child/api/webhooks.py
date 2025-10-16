@@ -18,20 +18,18 @@ from fastapi.responses import JSONResponse
 import sys
 from pathlib import Path
 
-parent_dir = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(parent_dir))
+# Imports from lib/ directory
 
-from src.config.settings import get_settings
-from src.utils.logger import configure_logging, get_logger
-from src.utils.llm_factory import LLMFactory
-from src.utils.supabase_client import create_supabase_client
-from src.utils.github_api import create_github_client
-from src.workflows.issue_handler import create_workflow_orchestrator
+
+from lib.src.config.settings import get_settings
+from lib.src.utils.logger import configure_logging, get_logger
+from lib.src.utils.llm_factory import LLMFactory
+from lib.src.utils.supabase_client import create_supabase_client
+from lib.src.utils.github_api import create_github_client
+from lib.src.workflows.issue_handler import create_workflow_orchestrator
 
 # Import SPECIALIZED agents from test-child
-test_child_dir = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(test_child_dir))
-
+# These are the e-commerce specialized agents, not the generic mother repo agents
 from src.agents.product_owner import ProductOwnerAgent
 from src.agents.developer import DeveloperAgent
 
